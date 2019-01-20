@@ -19,3 +19,18 @@ spring:
     password: 123456
   jpa:
     show-sql: true
+eureka:
+  instance:
+    hostname: registry
+    prefer-ip-address: true
+    metadata-map:
+      user.name: ${security.user.name}
+      user.password: ${security.user.password}
+  client:
+    service-url:
+      defaultZone: http://user:123456@localhost:8761/eureka/
+
+security:
+  user:
+    name: user
+    password: 123456
