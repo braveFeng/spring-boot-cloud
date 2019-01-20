@@ -13,7 +13,10 @@ eureka:
     status-page-url-path: ${server.context-path}${management.context-path}/info
     metadata-map:
       management.context-path: ${server.context-path}${management.context-path}
-
+security:
+  user:
+    name: user
+    password: password
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/user
